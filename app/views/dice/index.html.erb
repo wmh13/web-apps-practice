@@ -1,15 +1,21 @@
 <h1>Dice!</h1>
 
-<p>I love tacos</p>
-
 <%
-  fillings = ["Carnitas", "Al Pastor", "Pescado", "Avocado"]
+  die1 = rand(1..6)
+  die2 = rand(1..6)
+  total = die1 + die2
 %>
 
-<p>We have <%= fillings.count %> tacos</p>
+<p>
+  <img src="/images/dice/<%= die1 %>.svg" alt="Random die">
+  <img src="/images/dice/<%= die2 %>.svg" alt="Random die">
+</p>
 
-<ul>
-  <% for taco in fillings %>
-    <li><%= taco %></li>
-  <% end %>
-</ul>
+<p>
+  The total is <%= total %>
+</p>
+
+<p>
+  <a href="/dice">Roll again!</a>
+</p>
+
